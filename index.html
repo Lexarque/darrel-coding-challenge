@@ -6,7 +6,61 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>Semester Dean's List Eligibility Results</h1>
+    <header>
+      <h1>Semester Dean's List Eligibility Results</h1>
+      <button class="modal-btn" id="myBtn">Open Modal</button>
+    </header>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Add student info</p>
+        <div class="contact-form-container">
+          <div class="form-wrapper">
+            <form id="addStudentForm" method="post">
+              <div class="form__group">
+                <label for="name" class="form__label">Name:</label>
+                <input type="text" id="name" name="name" class="form__input" />
+              </div>
+
+              <div class="form__group">
+                <label for="cred_hours" class="form__label">Credit Hours:</label>
+                <input
+                  type="text"
+                  id="cred_hours"
+                  name="cred_hours"
+                  class="form__input"
+                />
+              </div>
+
+              <div class="form__group">
+                <label for="curr_gpa" class="form__label">Current GPA:</label>
+                <input
+                  type="text"
+                  id="curr_gpa"
+                  name="curr_gpa"
+                  class="form__input"
+                />
+              </div>
+
+              <div class="form__buttons">
+                <input
+                  type="button"
+                  value="Add"
+                  class="btn btn--primary"
+                  onclick="addStudent()"
+                />
+                <input
+                  type="button"
+                  value="Reset"
+                  class="btn btn--secondary"
+                  onclick="resetForm()"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="scripts.js"></script>
   </body>
 </html>

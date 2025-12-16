@@ -4,11 +4,25 @@ body {
   background-color: #f4f4f4;
   color: #333;
 }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #bdc3c7;
+}
+
 h1 {
   color: #2c3e50;
-  border-bottom: 2px solid #3498db;
-  padding-bottom: 5px;
+  /* border-bottom: 2px solid #3498db; */
+  padding-bottom: 0.5em;
 }
+
+h2 {
+  color: #34495e;
+  margin: 1.25rem auto;
+}
+
 .container {
   background-color: #fff;
   padding: 20px;
@@ -22,10 +36,153 @@ h1 {
   border: 1px dashed #7f8c8d;
   background-color: #ecf0f1;
 }
+
 .eligible {
   color: green;
   font-weight: bold;
 }
+
 .not-eligible {
   color: red;
+}
+
+/* Modal */
+
+.modal-btn {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Registration Form */
+.contact-form-container {
+  flex: 1;
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-section,
+.form-wrapper {
+  width: 100%;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.form__group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.form__label {
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+}
+
+.form__input {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.form__input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 4px rgba(52, 152, 219, 0.4);
+}
+
+.form__gender-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.form__checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.form__buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.btn {
+  flex: 1;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn--primary {
+  background-color: #3498db;
+  color: white;
+}
+
+.btn--primary:hover {
+  background-color: #217dbb;
+}
+
+.btn--secondary {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.btn--secondary:hover {
+  background-color: #c0392b;
 }
