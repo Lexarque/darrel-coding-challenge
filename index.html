@@ -47,9 +47,24 @@
 
         // 1. Define Multi-Dimensional Array studentData)
         // Format: [Name (String), Credit Hour (Number), Current GPA (Number)]
+        var studentData = [
+            ["Alice Johnson", 15, 3.8],
+            ["Bob Smith", 12, 3.4],
+            ["Catherine Lee", 18, 3.9],
+            ["David Brown", 9, 2.8],
+            ["Eva Green", 16, 3.6]
+        ];
 
 
         // 2. Create function to measure dean list eligibility using conditional statement
+
+        studentData.forEach(e => {
+            if (e[1] >= 12 && e[2] >= 3.5) {
+                e.push("Eligible");
+            } else {
+                e.push("Not Eligible");
+            }
+        });
 
 
         document.write("<div class='output-box'>");
@@ -57,14 +72,28 @@
 
         // 3.Create Looping (for loop) to print student data such name, credithours and current gpa and their eligibility (status)
 
-            
-            // 4. print all the output, this one need to be in the loop
+        for (var i = 0; i < studentData.length; i++) {
+            var name = studentData[i][0];
+            var creditHour = studentData[i][1];
+            var currentGPA = studentData[i][2];
+            var status = studentData[i][3];
+
             document.write("<div>");
-            document.write("<b>Name:</b><br>");
-            document.write("<b>Current GPA:</b><br>");
-            document.write("<b>Status:</b><br>");
+            document.write("<b>Name: </b>" + name + "<br>");
+            document.write("<b>Credit Hours:</b> " + creditHour + "<br>");
+            document.write("<b>Current GPA:</b> " + currentGPA + "<br>");
+            document.write("<b>Status: </b>");
+            if (status === "Eligible") {
+                document.write("<span class='eligible'>" + status + "</span><br>");
+            } else {
+                document.write("<span class='not-eligible'>" + status + "</span><br>");
+            }
             document.write("<hr style='border-top: 1px dotted #ccc;'>");
             document.write("</div>");
+        }
+            
+            // 4. print all the output, this one need to be in the loop
+           
         
         //here need to put closed-loop bracket
         document.write("</div>");
